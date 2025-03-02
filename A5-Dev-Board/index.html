@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F4F7FF] max-w-screen min-h-screen mx-auto font-family">
+    <nav
+        class="px-20 mt-20 p-5 flex justify-between items-center bg-[#FFFFFF] rounded-lg    max-w-7xl mx-auto shadow-md">
+        <div class="flex items-center space-x-2">
+            <img src="../A5-Dev-Board/assets/logo.png" alt="Image" class="w-10 h-10">
+            <h1>Dev <span class=" font-bold text-[#00303C]">Board</span></h1>
+        </div>
+        <div class="flex items-center space-x-2 ">
+            <div class="bg-[#F4F7FF] flex space-x-2 rounded-2xl px-2">
+                <img class="w-5 h-5" src="../A5-Dev-Board/assets/checkbox.png" alt="">
+                <span class="text-black-800 mr-2 font-bold" id="completedCount">23</span>
+            </div>
+            <div class="">
+                <div class="flex-1">
+                </div>
+                <div class="flex gap-2">
+                    <div class="flex justify-center items-center ">
+                        <img id="colorChangeImage" src="../A5-Dev-Board/assets/theme-btn.png" alt="Click to change color" class="cursor-pointer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md flex gap-6 mt-5">
+        <div class="w-3/4">
+
+            <div class="flex justify-between items-center mb-6">
+
+                <div class="flex items-center space-x-4 ">
+
+                    <div class="w-[263px] h-[100px] bg-blue-100 rounded-md p-6 ">
+                        <div class="flex justify-between items-center">
+                            <div class="bg-[#FFFFFF] rounded-full px-2 py-2">
+                                <img class="w-4 h-4" src="./assets/checkbox.png" alt="">
+                            </div>
+                            <div>
+                                <p>Task Assigned </p>
+                                <p class="text-3xl font-bold" id="taskCount">06</p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-[#3752FD] via-[#9BA8F8] to-[#9BA8F8] text-white p-4 rounded-lg flex">
+                        <div>
+                            <img src="./assets/board.png" alt="">
+                        </div>
+                        <button id="discover-btn" class="text-white px-4  rounded-lg">Discover Something New
+                            Today!</button>
+                    </div>
+                    <div class="w-[270px] h-[100px] bg-blue-100 rounded-md px-2 ">
+                        <div class="flex ">
+                            <div class="p-2 mt-3 bg-[#FFFFFF] rounded-full ">
+                                <img class="" src=".//assets/calender.png" alt="">
+                            </div>
+                            <div class="p-2 mt-3">                              
+                                <p class="text-xl" id="currentDate"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="w-[294px] h-[200px] bg-blue-100 rounded-md p-4 ">
+                    <div class="bg-[#FFFFFF]  w-25 px-2 py-1 rounded-lg  ">
+                        ShopEase
+                    </div>
+                    <div class="text-xl mb-3 title-fix">
+                       <p>Fix Mobile Button Issue</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg mb-3 text-gray-500 text-sm">
+                        Debug using Chrome DevTools, check for overlapping...
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs">
+                            Deadline<br>21 March 2025
+                        </div>
+                        <button class="bg-[#3752FD] text-white py-1 px-2 rounded complete-btn" data-task-id="1">Completed</button>
+                    </div>
+                </div>
+                <div class="w-[294px] h-[200px] bg-blue-100 rounded-md p-4 ">
+                    <div class="bg-[#FFFFFF]  w-25 px-2 py-1 rounded-lg  ">
+                        CloudSync
+                    </div>
+                    <div class="text-xl mb-3 title-fix">
+                        <p>Add Dark Mode</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg mb-3 text-gray-500 text-sm">
+                        Store the user's preference in localStorage, update CSS....
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs">
+                            Deadline<br>21 March 2025
+                        </div>
+                        <button class="bg-[#3752FD] text-white py-1 px-2 rounded complete-btn" data-task-id="2">Completed</button>
+                    </div>
+                </div>
+
+                <div class="w-[294px] h-[200px] bg-blue-100 rounded-md p-4 ">
+                    <div class="bg-[#FFFFFF]  w-20 px-2 py-1 rounded-lg  ">
+                        SwiftPay
+                    </div>
+                    <div class="text-xl mb-3 title-fix">
+                        <p>Optimize Home page </p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg mb-3 text-gray-500 text-sm">
+                        Debug using Chrome DevTools, check for overlapping...
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs">
+                            Deadline<br>21 March 2025
+                        </div>
+                        <button class="bg-[#3752FD] text-white py-1 px-2 rounded complete-btn" data-task-id="3">Completed</button>
+                    </div>
+                </div>
+                <div class="w-[294px] h-[200px] bg-blue-100 rounded-md p-4 ">
+                    <div class="bg-[#FFFFFF]  w-20 px-2 py-1 rounded-lg  ">
+                        Meta
+                    </div>
+                    <div class="text-xl mb-3 title-fix">
+                       <p> Add new emoji 🤲</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg mb-3 text-gray-500 text-sm">
+                        Debug using Chrome DevTools, check for overlapping...
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs">
+                            Deadline<br>21 March 2025
+                        </div>
+                        <button class="bg-[#3752FD] text-white py-1 px-2 rounded complete-btn" data-task-id="4">Completed</button>
+                    </div>
+                </div>
+                <div class="w-[294px] h-[200px] bg-blue-100 rounded-md p-4 ">
+                    <div class="bg-[#FFFFFF]  w-30 px-2 py-1 rounded-lg  ">
+                        Google LLC
+                    </div>
+                    <div class="text-xl mb-3 title-fix">
+                        <p>Integrate OpenAI API</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg mb-3 text-gray-500 text-sm">
+                        Debug using Chrome DevTools, check for overlapping...
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs">
+                            Deadline<br>21 March 2025
+                        </div>
+                        <button class="bg-[#3752FD] text-white py-1 px-2 rounded complete-btn" data-task-id="5">Completed</button>
+                    </div>
+                </div>
+                <div class="w-[294px] h-[200px] bg-blue-100 rounded-md p-4 ">
+                    <div class="bg-[#FFFFFF]  w-25 px-2 py-1 rounded-lg  ">
+                        Glassdoar
+                    </div>
+                    <div class="text-xl mb-3 title-fix">
+                        <p>Improve Job searching</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-lg mb-3 text-gray-500 text-sm">
+                        Debug using Chrome DevTools, check for overlapping...
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs">
+                            Deadline<br>21 March 2025
+                        </div>
+                        <button class="bg-[#3752FD] text-white py-1 px-2 rounded complete-btn" data-task-id="6">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Log -->
+        <div class="w-1/4 bg-white p-4 px-20 rounded-lg shadow-md border border-gray-200 ">
+            <div class="flex w-[24px] h-[24px] gap-6">
+                <img class="mt-1" src="./assets/activity.png" alt="">
+                <h2 class="text-lg font-semibold">Activity Log</h2>
+            </div>
+            
+            <button id="clearHistory" class="bg-[#3752FD] hover:bg-gray-400 text-white font-bold py-2 px-4 rounded mt-10">
+                Clear History
+            </button>
+            <div id="activityLog" class="mt-5"></div>
+        </div>
+    </div>
+
+
+    <script src="./script/discover.js"></script>
+</body>
+
+</html>
+
+

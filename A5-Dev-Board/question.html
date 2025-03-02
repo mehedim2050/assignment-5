@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="max-w-screen min-h-screen mx-auto">
+    <nav
+        class="px-20 mt-5 p-5 flex justify-between items-center bg-[#FFFFFF] rounded-lg    max-w-7xl mx-auto shadow-md">
+        <div class="flex items-center space-x-2">
+            <img src="../A5-Dev-Board/assets/logo.png" alt="Image" class="w-10 h-10">
+            <h1>Dev <span class=" font-bold text-[#00303C]">Board</span></h1>
+        </div>
+        <div class="flex items-center space-x-2 ">
+            <div class="bg-[#F4F7FF] flex space-x-2 rounded-2xl px-2">
+                <button id="back-btn" class="bg-[#3752FD] text-white px-4 py-1 rounded-lg " onclick="goBack()">Back to Desk</button>
+            </div>
+        </div>
+    </nav>
+    <div class="font-bold text-lg text-center pt-5 ">
+        <h1>Blogs</h1>
+    </div>
+
+    <div class="bg-[#FFFFFF]  rounded-md px-20 py-10 space-y-5">
+        <h2 class="font-bold">Question-1: what are the different ways to select on an element in the Dom?</h2>
+        <p>Using getElementById.
+            Using getElementsByClassName.
+            Using getElementsByTagName.
+            Using querySelector.
+            Using querySelectorAll.</p>
+    </div>
+    <div class="bg-[#FFFFFF] rounded-md px-20 py-10 space-y-5">
+        <h2 class="font-bold">Question-2:What is the difference between innerHTML, innerText, and textContent ? </h2>
+        <p>textContents is all text contained by an element and all its children that are for formatting purposes only.
+            innerText returns all text contained by an element and all its child elements. innerHtml returns all text,
+            including html tags, that is contained by an element.</p>
+    </div>
+    <div class="bg-[#FFFFFF]  rounded-md px-20 py-10 space-y-5">
+        <h2 class="font-bold">Question-3:What is event delegation in the DOM? </h2>
+        <p>a technique where you attach a single event listener to a parent element, allowing it to handle events
+            triggered on its child elements, instead of adding separate listeners to each child element</p>
+    </div>
+    <div class="bg-[#FFFFFF]  rounded-md px-20 py-10 space-y-5">
+        <h2 class="font-bold">Question-4:What is event bubbling in the DOM? </h2>
+        <p>the behavior where when an event occurs on an element, it triggers not only on that element but also
+            propagates upwards through the DOM hierarchy, firing event handlers on its parent elements until it reaches
+            the topmost element (usually the document)</p>
+    </div>
+    <div class="bg-[#FFFFFF]  rounded-md px-20 py-10 space-y-10">
+        <h2 class="font-bold">Question-5:How do you create, add, and remove elements using JavaScript?</h2>
+        <p>const para = document.createElement("p");
+            const node = document.createTextNode("This is a new paragraph.");
+            para.appendChild(node);
+            const element = document. getElementById("div1");
+            element. appendChild(para);
+            const elmnt = document.getElementById("p1");
+            elmnt.remove();
+            const parent = document.</p>
+    </div>
+    <script src="./script/discover.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+
+</html>
