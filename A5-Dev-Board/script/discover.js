@@ -28,37 +28,6 @@ const dateElement = document.getElementById('currentDate');
 const currentDate = new Date();
 const options = { year: 'numeric', month: 'short', day: 'numeric' };
 dateElement.textContent = currentDate.toLocaleDateString('en-US', options);
-
-
-
-// const taskCountElement = document.getElementById('taskCount');
-// let taskCount = parseInt(taskCountElement.textContent);
-
-// const completedCountElement = document.getElementById('completedCount');
-// let completedCount = parseInt(completedCountElement.textContent);
-
-// const completeButtons = document.querySelectorAll('.complete-btn');
-
-// completeButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-//         if (taskCount > 0) {
-//             taskCount--;
-//             taskCountElement.textContent = taskCount.toString();
-//             completedCount++;
-//             completedCountElement.textContent = completedCount.toString();
-//             button.disabled = true;
-//             button.classList.remove('bg-green-500');
-//             button.classList.add('bg-gray-400');
-
-
-//             alert("Board Update Successfully!");
-//             if (button.dataset.taskId === "6") {
-//                 alert("Congratulations! You have completed all the current tasks.!");
-//             }
-//         }
-//     });
-// });
-
 const taskCountElement = document.getElementById('taskCount');
 let taskCount = parseInt(taskCountElement.textContent);
 
