@@ -1,5 +1,5 @@
 document.getElementById("discover-btn").addEventListener("click", function (event) {
-    window.location.href = "./question.html"
+    window.location.href = "./index1.html"
 
 
 })
