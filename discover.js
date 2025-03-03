@@ -53,12 +53,12 @@ completeButtons.forEach(button => {
                 alert("Congratulations! You have completed all the current tasks.!");
             }
             const now = new Date();
-            const time = now.toLocaleTimeString();         
-             
-            const logMessage = `You have Completed the Task :   ${button.dataset.taskId} at ${time}`;
+            const time = now.toLocaleTimeString();
+
+            const logMessage = `You have Completed the Task : ${button.dataset.taskId} at ${time}`;
             const logItem = document.createElement('p');
             logItem.textContent = logMessage;
-            logItem.classList.add('bg-gray-100', 'p-2','mb-2', 'rounded');
+            logItem.classList.add('bg-gray-100', 'p-2', 'mb-2', 'rounded');
             activityLog.appendChild(logItem);
         }
     });
