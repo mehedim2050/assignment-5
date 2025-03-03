@@ -49,9 +49,10 @@ completeButtons.forEach(button => {
             button.classList.remove('bg-green-500');
             button.classList.add('bg-gray-400');
             alert("Board Update Successfully!");
-            if (button.dataset.taskId === "6") {
-                alert("Congratulations! You have completed all the current tasks.!");
-            }
+           
+            if (button.dataset.taskId.length>"6") {
+                alert("Congratulations! You have completed all the current tasks.!");             
+         }
             const now = new Date();
             const time = now.toLocaleTimeString();
 
